@@ -7,57 +7,90 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "ShopEase",
+    description: "Ecommerce Application",
+    image: "/images/projects/Capture-1.png",
+    tag: ["All", "MERN"],
+    gitUrl: "https://github.com/Poorvank-Shah/ShopEase",
+    previewUrl: "https://store-qsts.onrender.com/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "CandleVue",
+    description: "Real-time Candlestick Chart Visulization",
+    image: "/images/projects/Capture-2.png",
+    tag: ["All", "MERN"],
+    gitUrl: "https://github.com/Poorvank-Shah/Candlestick-Chart-Viewer",
+    previewUrl: "https://chart-viewer.onrender.com/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "AdminHub",
+    description: "Admin Dashboard for ShopEase",
+    image: "/images/projects/Capture-3.png",
+    tag: ["All", "MERN"],
+    gitUrl: "https://github.com/Poorvank-Shah/AdminHub-ShopEase",
+    previewUrl: "https://store-admin-i5pv.onrender.com/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Todo List",
+    description: "Take care of daily todos",
+    image: "/images/projects/Capture-4.png",
+    tag: ["All", "React"],
+    gitUrl: "https://github.com/Poorvank-Shah/Todo-list",
+    previewUrl: "https://todo-list-r1mx.onrender.com/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    title: "Expense Tracker",
+    description: "Manages income and expense",
+    image: "/images/projects/Capture-5.png",
+    tag: ["All", "React"],
+    gitUrl: "https://github.com/Poorvank-Shah/Expense-Tracker",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    title: "Url Shortener",
+    description: "Shortens large Urls using shrtco.de api",
+    image: "/images/projects/Capture-6.png",
+    tag: ["All", "React"],
+    gitUrl: "https://github.com/Poorvank-Shah/Url-Shortener",
+    previewUrl: "https://url-shortener-xljt.onrender.com/",
+  },
+  {
+    id: 7,
+    title: "Dance Academy",
+    description: "",
+    image: "/images/projects/Capture-7.png",
+    tag: ["All", "Node"],
+    gitUrl: "https://github.com/Poorvank-Shah/Dance-Academy",
     previewUrl: "/",
+  }, {
+    id: 8,
+    title: "LinkTracker",
+    description: "Tracking number of clicks of a shortened link",
+    image: "/images/projects/Capture-8.png",
+    tag: ["All", "Node"],
+    gitUrl: "https://github.com/Poorvank-Shah/LinkTracker",
+    previewUrl: "",
+  }, {
+    id: 9,
+    title: "Covid-19 Awareness",
+    description: "Spreading awareness regarding COVID-19",
+    image: "/images/projects/Capture-9.png",
+    tag: ["All", "Javascript"],
+    gitUrl: "https://github.com/Poorvank-Shah/covid-19_awareness",
+    previewUrl: "https://poorvank-shah.github.io/covid-19_awareness/",
+  }, {
+    id: 10,
+    title: "Gossip",
+    description: "Multipage video calling webapp with smooth animation",
+    image: "/images/projects/Capture-10.png",
+    tag: ["All", "Javascript"],
+    gitUrl: "https://github.com/Poorvank-Shah/GossiPP",
+    previewUrl: "https://poorvank-shah.github.io/GossiPP/",
   },
 ];
 
@@ -79,12 +112,39 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
 
+  const containerRef = useRef(null);
+  const [startX, setStartX] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!startX) return;
+
+    const currentX = e.touches[0].clientX;
+    const deltaX = startX - currentX;
+    containerRef.current.scrollLeft = scrollLeft + deltaX;
+  };
+
+  const handleTouchEnd = () => {
+    setStartX(null);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div
+        ref={containerRef}
+        className="text-white flex flex-row overflow-x-auto gap-2 my-6 pb-5 sm:justify-center"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -92,16 +152,26 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="MERN"
+          isSelected={tag === "MERN"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="React"
+          isSelected={tag === "React"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Node"
+          isSelected={tag === "Node"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Javascript"
+          isSelected={tag === "Javascript"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 ">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

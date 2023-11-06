@@ -9,12 +9,9 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>C, C++, Java, SQL, Git, Gradle</li>
+        <li>HTML, CSS, Javascript, React.js, Next.js, Tailwind CSS, Bootstrap, Redux </li>
+        <li>Node.js, Express.js, MongoDB, Firebase</li>
       </ul>
     ),
   },
@@ -23,18 +20,18 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Sardar Vallabhbhai National Institute of Technology, Surat <br />(NIT Surat) - <i>B.Tech in CSE</i></li>
+
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Achievements",
+    id: "achievements",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>JEE Advanced 2020 - AIR 11540 (Top 4%)</li>
+        <li>JEE Main 2020 - AIR 7566 (Top 0.5%)</li>
       </ul>
     ),
   },
@@ -53,7 +50,7 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/IMG_2023.jpg" width={400} height={400} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -80,11 +77,11 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("achievements")}
+              active={tab === "achievements"}
             >
               {" "}
-              Certifications{" "}
+              Achievements{" "}
             </TabButton>
           </div>
           <div className="mt-8">
