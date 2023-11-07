@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Innovative thinker and proactive problem-solver, ready to bring creativity, dedication, and a unique perspective to drive your team's success at the intersection of technology and creativity!
+            Innovative thinker and proactive problem-solver, ready to bring creativity, dedication, and a unique perspective to drive your team`&apos;`s success at the intersection of technology and creativity!
           </p>
           <div>
             <Link
