@@ -54,12 +54,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I'm Poorvank Shah from Ahmedabad, Gujarat. Currently pursuing a Bachelor's degree in Computer Science and Engineering at NIT Surat, I am a full stack developer with a passion for creating interactive and responsive applications. I have experience working with Java, JavaScript, React, Next, Node. Beyond coding, I find joy in playing the piano, spiking volleyballs on the court, and reading books. I am a quick learner always eager to expand my knowledge and skill set. As a team player, I am excited to collaborate with others and contribute to building amazing solutions.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

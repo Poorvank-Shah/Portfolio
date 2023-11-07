@@ -15,6 +15,15 @@ const projectsData = [
     previewUrl: "https://store-qsts.onrender.com/",
   },
   {
+    id: 13,
+    title: "Portfolio",
+    description: "My Portfolio in NextJS and Tailwind CSS",
+    image: "/images/projects/13.png",
+    tag: ["All", "Next"],
+    gitUrl: "https://github.com/Poorvank-Shah/Portfolio",
+    previewUrl: "https://poorvankshah.vercel.app/",
+  },
+  {
     id: 2,
     title: "CandleVue",
     description: "Real-time Candlestick Chart Visulization",
@@ -159,6 +168,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="React"
           isSelected={tag === "React"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Next"
+          isSelected={tag === "Next"}
         />
         <ProjectTag
           onClick={handleTagChange}
