@@ -32,12 +32,6 @@ const Navbar = () => {
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           <p className="text-2xl" style={{fontFamily:"cursive"}}>Poorvank Shah</p>
-
-          {/* <Image 
-            src={"/images/signature1.png"}
-            width={50}
-            height={50}
-          /> */}
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
