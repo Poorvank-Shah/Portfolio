@@ -46,7 +46,7 @@ const Experience = () => {
     // const { theme } = useTheme();
     return (
         <>
-            <section id="experience" className="mt-28 mb-28 sm:mb-40">
+            <section id="experience" className="mt-8 mb-28 sm:mb-40">
                 <h2 className="text-4xl font-bold text-white mb-4 text-center">My Experience</h2>
                 <VerticalTimeline lineColor="linear-gradient(to bottom, #55d7f7, rgb(99, 247, 85))">
                     {experiencesData.map((item, index) => (
