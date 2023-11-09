@@ -1,0 +1,90 @@
+"use client";
+
+import React from "react";
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { CgWorkAlt } from "react-icons/cg";
+import { LuGraduationCap } from "react-icons/lu";
+
+
+
+const experiencesData = [
+    {
+        id: 3,
+        company: "WictroniX",
+        role: "Project Manager and Developer",
+        date: "August 2023 – October 2023",
+        location: "Surat, Gujarat",
+        icon: <CgWorkAlt />,
+        description: "Led a six-member team in an early-stage startup, overseeing full-stack development for a tax consultant client." + "\n" + "Contributed to strategic planning, development cycles, and startup growth through hands-on development.",
+    },
+    {
+        id: 2,
+        company: "Barclays",
+        role: "Developer Intern",
+        date: "May 2023 – July 2023",
+        location: "Pune, Maharashtra",
+        icon: <CgWorkAlt />,
+        description: "Developed specialized Logging Framework gaining hands-on experience on Java, Gradle, and the Log4j2 Library, while implementing object-oriented programming concepts.",
+    },
+    {
+        id: 1,
+        company: "SVNIT" + "" + "(NIT Surat)",
+        role: "B.Tech in CSE",
+        date: "Dec 2020 – May 2024",
+        location: "Surat, Gujarat",
+        icon: <LuGraduationCap />,
+        description: "Data Structures and Algorithms, DBMS, Operating System, Object-Oriented Programming, Distributed System, Cloud Computing, Software Engineering and Methodology (SDLC)",
+    }
+    
+]
+const Experience = () => {
+    // const { ref } = useSectionInView("Experience");
+    // const { theme } = useTheme();
+    return (
+        <>
+            <section id="experience" className="mt-28 mb-28 sm:mb-40">
+                <h2 className="text-4xl font-bold text-white mb-4 text-center">My Experience</h2>
+                <VerticalTimeline lineColor="linear-gradient(to bottom, #55d7f7, rgb(99, 247, 85))">
+                    {experiencesData.map((item, index) => (
+                        <React.Fragment key={index}>
+                            <VerticalTimelineElement
+                                className="text-lg"
+                                contentStyle={{
+                                    background: "rgba(255, 255, 255, 0.05)",
+                                    boxShadow: "none",
+                                    border: "1px solid rgba(0, 0, 0, 0.05)",
+                                    textAlign: "left",
+                                    padding: "1.3rem 2rem",
+                                }}
+                                contentArrowStyle={{
+                                    borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
+                                }}
+                                date={item.date}
+                                dateClassName="text-lg"
+                                icon={item.icon}
+                                iconStyle={{
+                                    background: "rgb(0,0,0)",
+                                    fontSize: "1.5rem",
+                                    boxShadow: "0 0 0 4px rgb(168 85 247), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05)"
+                                }}
+                            >
+                                <h2 className=" font-extrabold" style={{color:"white"}}>{item.role}</h2>
+                                <h3 className="font-normal !mt-0 ">{item.company}</h3>
+                                {/* </div> */}
+                                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75 whitespace-pre-line ">
+                                    {item.description}
+                                </p>
+                            </VerticalTimelineElement>
+                        </React.Fragment>
+                    ))}
+                </VerticalTimeline>
+            </section>
+        </>
+    )
+}
+
+export default Experience
