@@ -16,7 +16,7 @@ const experiencesData = [
         id: 3,
         company: "WictroniX",
         role: "Project Manager and Developer",
-        date: "August 2023 – October 2023",
+        date: "Aug 2023 – Oct 2023",
         location: "Surat, Gujarat",
         icon: <CgWorkAlt />,
         description: "Led a six-member team in an early-stage startup, overseeing full-stack development for a tax consultant client." + "\n" + "Contributed to strategic planning, development cycles, and startup growth through hands-on development.",
@@ -42,8 +42,6 @@ const experiencesData = [
     
 ]
 const Experience = () => {
-    // const { ref } = useSectionInView("Experience");
-    // const { theme } = useTheme();
     return (
         <>
             <section id="experience" className="mt-8 mb-28 sm:mb-40">
@@ -58,7 +56,6 @@ const Experience = () => {
                                     boxShadow: "none",
                                     border: "1px solid rgba(0, 0, 0, 0.05)",
                                     textAlign: "left",
-                                    padding: "1.3rem 2rem",
                                 }}
                                 contentArrowStyle={{
                                     borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
