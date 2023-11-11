@@ -37,7 +37,7 @@ const experiencesData = [
         date: "Dec 2020 – May 2024",
         location: "Surat, Gujarat",
         icon: <LuGraduationCap />,
-        description: "Data Structures and Algorithms, DBMS, Operating System, Object-Oriented Programming, Distributed System, Cloud Computing, Software Engineering and Methodology (SDLC)",
+        description: "Data Structures and Algorithms, Database Management System, Operating System, Object-Oriented Programming, Distributed System, Cloud Computing, Software Engineering and Methodology (SDLC)",
     }
     
 ]
