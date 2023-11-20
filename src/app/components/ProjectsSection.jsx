@@ -30,7 +30,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "MERN"],
     gitUrl: "https://github.com/Poorvank-Shah/Candlestick-Chart-Viewer",
-    previewUrl: "https://chart-viewer.onrender.com/",
+    previewUrl: "https://candlevue.vercel.app/",
   },
   {
     id: 3,
