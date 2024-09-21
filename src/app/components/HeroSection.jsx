@@ -15,27 +15,32 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center order-last sm:order-none sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="mb-[50px] text-white text-4xl sm:text-5xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
-              sequence={[
-                "Poorvank",
-                1000,
-                "Web Developer",
-                1000,
-                "CSE Undergrad",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <div className="h-10">
+              <TypeAnimation
+                sequence={[
+                  "Poorvank",
+                  1000,
+                  "Software Developer",
+                  1000,
+                  "CSE Graduate, NIT Surat",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </div>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Innovative thinker and proactive problem-solver, ready to bring creativity, dedication, and a unique perspective to drive your team&apos;s success at the intersection of technology and creativity!
+            Innovative thinker and proactive problem-solver, ready to bring
+            creativity, dedication, and a unique perspective to drive your
+            team&apos;s success at the intersection of technology and
+            creativity!
           </p>
           <div>
             <Link
