@@ -6,6 +6,15 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 11,
+    title: "Flamingo.ai",
+    description: "An AI-driven SaaS platform",
+    image: "/images/projects/11.png",
+    tag: ["All", "MERN", "Next"],
+    gitUrl: "https://github.com/Aniumbott/FlamingoAI",
+    previewUrl: "https://flamingo.ai/",
+  },
+  {
     id: 1,
     title: "ShopEase",
     description: "Ecommerce Application",
