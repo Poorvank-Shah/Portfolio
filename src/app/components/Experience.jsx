@@ -18,7 +18,10 @@ const experiencesData = [
     location: "Pune, Maharashtra",
     icon: <CgWorkAlt />,
     description: [
-      "Developing and optimizing mortgage-related APIs using Java and Spring Boot, ensuring seamless integration and high-performance solutions within the banking domain.",
+      "Contributed to the Mortgages API team, gaining hands-on experience in Java, Spring Boot and Microservices along with supporting Barclays legacy systems, showcasing multitasking and adaptability.",
+      "Wrote JUnit test cases for 10+ APIs, achieving 90%+ code coverage, improving reliability, and ensuring robust error handling.",
+      "Resolved a critical API routing issue, ensuring accurate downstream request handling and data consistency across regions.",
+      "Strengthened API security and reliability by addressing Prisma vulnerabilities, migrating to updated base templates, and upgrading authentication certificates for secure communication.",
     ],
   },
   {
@@ -29,10 +32,9 @@ const experiencesData = [
     location: "Remote, UK",
     icon: <CgWorkAlt />,
     description: [
-      "Developed Welinq’s web platform  using Vue.js and Nuxt.js, ensuring a user-friendly experience.",
-      "Spearheaded the development of Welinq’s Case Management Tool, streamlining therapist workflow by implementing features such as digital case files and patient management systems.",
-      "Contributed to the development of Talktherapy by integrating supervised Chat Therapy functionality using generative AI, enhancing communication between therapists and patients, and improving therapy accessibility.",
-      "Build two web applications welinq.io and talktherapy.io from scratch, collaborating closely with a small team of developers.",
+      "Launched Two web applications from scratch in a fast-paced startup, leveraging VueJS, NuxtJS, while collaborating closely to drive product development and innovation.",
+      "Developed Welinq , a platform connecting clients with therapists and enabling seamless scheduling of therapy sessions.",
+      "Built TalkTherapy, an AI-driven chat therapy platform enabling real-time conversations, supervised by professional therapists, to enhance accessibility to mental health support.",
     ],
   },
   {
@@ -56,7 +58,7 @@ const experiencesData = [
     icon: <CgWorkAlt />,
     description: [
       "Developed a specialized Logging Framework enforcing the logging of correlation IDs, enhancing observability and traceability in a dynamic microservices architecture.",
-      "Collaborated within a team of 7, gaining hands-on experience with Java, Spring, Gradle, and the Log4j2 Library, while implementing object-oriented programming concepts.",
+      "Collaborated within a team of 7, gaining hands-on experience with Java, Gradle, and the Log4j2 Library while implementing object-oriented programming concepts.",
     ],
   },
   {
@@ -74,7 +76,7 @@ const experiencesData = [
 const Experience = () => {
   return (
     <>
-      <section id="experience" className="mt-8 mb-28 sm:mb-40">
+      <section id="experience" className="mt-8 mb-16 md:mb-40">
         <h2 className="text-4xl font-bold text-white mb-4 text-center">
           My Experience
         </h2>
@@ -102,17 +104,17 @@ const Experience = () => {
                     "0 0 0 4px rgb(168 85 247), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05)",
                 }}
               >
-                <h2 className=" font-extrabold" style={{ color: "white" }}>
+                <h2 className=" font-bold" style={{ color: "white" }}>
                   {item.role}
                 </h2>
                 <h3 className="font-normal !mt-0 ">{item.company}</h3>
                 {/* </div> */}
                 <ul className="!mt-1 ml-2 !font-normal text-gray-700 dark:text-white/75 whitespace-pre-line list-disc">
-                    {Array.isArray(item.description) &&
-                      item.description.map((desc, index) => (
-                        <li key={index}>{desc}</li>
-                      ))}
-                  </ul>
+                  {Array.isArray(item.description) &&
+                    item.description.map((desc, index) => (
+                      <li key={index} className="mt-2">{desc}</li>
+                    ))}
+                </ul>
               </VerticalTimelineElement>
             </React.Fragment>
           ))}

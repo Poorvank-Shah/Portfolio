@@ -68,15 +68,16 @@ const projectsData = [
     gitUrl: "https://github.com/Poorvank-Shah/Url-Shortener",
     previewUrl: "https://url-shortener-xljt.onrender.com/",
   },
+  // {
+  //   id: 7,
+  //   title: "Dance Academy",
+  //   description: "",
+  //   image: "/images/projects/7.png",
+  //   tag: ["All", "Node"],
+  //   gitUrl: "https://github.com/Poorvank-Shah/Dance-Academy",
+  //   previewUrl: "/",
+  // },
   {
-    id: 7,
-    title: "Dance Academy",
-    description: "",
-    image: "/images/projects/7.png",
-    tag: ["All", "Node"],
-    gitUrl: "https://github.com/Poorvank-Shah/Dance-Academy",
-    previewUrl: "/",
-  }, {
     id: 8,
     title: "LinkTracker",
     description: "Tracking number of clicks of a shortened link",
@@ -84,23 +85,25 @@ const projectsData = [
     tag: ["All", "Node"],
     gitUrl: "https://github.com/Poorvank-Shah/LinkTracker",
     previewUrl: "",
-  }, {
-    id: 9,
-    title: "Covid-19 Awareness",
-    description: "Spreading awareness regarding COVID-19",
-    image: "/images/projects/9.png",
-    tag: ["All", "Javascript"],
-    gitUrl: "https://github.com/Poorvank-Shah/covid-19_awareness",
-    previewUrl: "https://poorvank-shah.github.io/covid-19_awareness/",
-  }, {
-    id: 10,
-    title: "Gossip",
-    description: "Multipage video calling webapp with smooth animation",
-    image: "/images/projects/10.png",
-    tag: ["All", "Javascript"],
-    gitUrl: "https://github.com/Poorvank-Shah/GossiPP",
-    previewUrl: "https://poorvank-shah.github.io/GossiPP/",
   },
+  // {
+  //   id: 9,
+  //   title: "Covid-19 Awareness",
+  //   description: "Spreading awareness regarding COVID-19",
+  //   image: "/images/projects/9.png",
+  //   tag: ["All", "Javascript"],
+  //   gitUrl: "https://github.com/Poorvank-Shah/covid-19_awareness",
+  //   previewUrl: "https://poorvank-shah.github.io/covid-19_awareness/",
+  // },
+  // {
+  //   id: 10,
+  //   title: "Gossip",
+  //   description: "Multipage video calling webapp with smooth animation",
+  //   image: "/images/projects/10.png",
+  //   tag: ["All", "Javascript"],
+  //   gitUrl: "https://github.com/Poorvank-Shah/GossiPP",
+  //   previewUrl: "https://poorvank-shah.github.io/GossiPP/",
+  // },
 ];
 
 const ProjectsSection = () => {
@@ -185,7 +188,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Javascript"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 ">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-6 md:gap-11 ">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
